@@ -15,6 +15,7 @@
 		1AFD12962532E11600F3FAF3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AFD12942532E11600F3FAF3 /* LaunchScreen.storyboard */; };
 		1AFD12A12532E11600F3FAF3 /* CropToolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFD12A02532E11600F3FAF3 /* CropToolTests.swift */; };
 		1AFD12AC2532E11700F3FAF3 /* CropToolUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFD12AB2532E11700F3FAF3 /* CropToolUITests.swift */; };
+		1AFD12BD2532E2FB00F3FAF3 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFD12BC2532E2FB00F3FAF3 /* CanvasView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		1AFD12A72532E11700F3FAF3 /* CropToolUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CropToolUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AFD12AB2532E11700F3FAF3 /* CropToolUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropToolUITests.swift; sourceTree = "<group>"; };
 		1AFD12AD2532E11700F3FAF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1AFD12BC2532E2FB00F3FAF3 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				1AFD12892532E11400F3FAF3 /* AppDelegate.swift */,
 				1AFD128B2532E11400F3FAF3 /* SceneDelegate.swift */,
 				1AFD128D2532E11400F3FAF3 /* ViewController.swift */,
+				1AFD12BC2532E2FB00F3FAF3 /* CanvasView.swift */,
 				1AFD128F2532E11400F3FAF3 /* Main.storyboard */,
 				1AFD12922532E11600F3FAF3 /* Assets.xcassets */,
 				1AFD12942532E11600F3FAF3 /* LaunchScreen.storyboard */,
@@ -260,6 +263,7 @@
 			files = (
 				1AFD128E2532E11400F3FAF3 /* ViewController.swift in Sources */,
 				1AFD128A2532E11400F3FAF3 /* AppDelegate.swift in Sources */,
+				1AFD12BD2532E2FB00F3FAF3 /* CanvasView.swift in Sources */,
 				1AFD128C2532E11400F3FAF3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
