@@ -1,0 +1,598 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1AFD128A2532E11400F3FAF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFD12892532E11400F3FAF3 /* AppDelegate.swift */; };
+		1AFD128C2532E11400F3FAF3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFD128B2532E11400F3FAF3 /* SceneDelegate.swift */; };
+		1AFD128E2532E11400F3FAF3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFD128D2532E11400F3FAF3 /* ViewController.swift */; };
+		1AFD12912532E11400F3FAF3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AFD128F2532E11400F3FAF3 /* Main.storyboard */; };
+		1AFD12932532E11600F3FAF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AFD12922532E11600F3FAF3 /* Assets.xcassets */; };
+		1AFD12962532E11600F3FAF3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AFD12942532E11600F3FAF3 /* LaunchScreen.storyboard */; };
+		1AFD12A12532E11600F3FAF3 /* CropToolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFD12A02532E11600F3FAF3 /* CropToolTests.swift */; };
+		1AFD12AC2532E11700F3FAF3 /* CropToolUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFD12AB2532E11700F3FAF3 /* CropToolUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1AFD129D2532E11600F3FAF3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1AFD127E2532E11400F3FAF3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1AFD12852532E11400F3FAF3;
+			remoteInfo = CropTool;
+		};
+		1AFD12A82532E11700F3FAF3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1AFD127E2532E11400F3FAF3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1AFD12852532E11400F3FAF3;
+			remoteInfo = CropTool;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1AFD12862532E11400F3FAF3 /* CropTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CropTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AFD12892532E11400F3FAF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1AFD128B2532E11400F3FAF3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		1AFD128D2532E11400F3FAF3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1AFD12902532E11400F3FAF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1AFD12922532E11600F3FAF3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1AFD12952532E11600F3FAF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1AFD12972532E11600F3FAF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1AFD129C2532E11600F3FAF3 /* CropToolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CropToolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AFD12A02532E11600F3FAF3 /* CropToolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropToolTests.swift; sourceTree = "<group>"; };
+		1AFD12A22532E11600F3FAF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1AFD12A72532E11700F3FAF3 /* CropToolUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CropToolUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AFD12AB2532E11700F3FAF3 /* CropToolUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropToolUITests.swift; sourceTree = "<group>"; };
+		1AFD12AD2532E11700F3FAF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1AFD12832532E11400F3FAF3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1AFD12992532E11600F3FAF3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1AFD12A42532E11700F3FAF3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1AFD127D2532E11400F3FAF3 = {
+			isa = PBXGroup;
+			children = (
+				1AFD12882532E11400F3FAF3 /* CropTool */,
+				1AFD129F2532E11600F3FAF3 /* CropToolTests */,
+				1AFD12AA2532E11700F3FAF3 /* CropToolUITests */,
+				1AFD12872532E11400F3FAF3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1AFD12872532E11400F3FAF3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1AFD12862532E11400F3FAF3 /* CropTool.app */,
+				1AFD129C2532E11600F3FAF3 /* CropToolTests.xctest */,
+				1AFD12A72532E11700F3FAF3 /* CropToolUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1AFD12882532E11400F3FAF3 /* CropTool */ = {
+			isa = PBXGroup;
+			children = (
+				1AFD12892532E11400F3FAF3 /* AppDelegate.swift */,
+				1AFD128B2532E11400F3FAF3 /* SceneDelegate.swift */,
+				1AFD128D2532E11400F3FAF3 /* ViewController.swift */,
+				1AFD128F2532E11400F3FAF3 /* Main.storyboard */,
+				1AFD12922532E11600F3FAF3 /* Assets.xcassets */,
+				1AFD12942532E11600F3FAF3 /* LaunchScreen.storyboard */,
+				1AFD12972532E11600F3FAF3 /* Info.plist */,
+			);
+			path = CropTool;
+			sourceTree = "<group>";
+		};
+		1AFD129F2532E11600F3FAF3 /* CropToolTests */ = {
+			isa = PBXGroup;
+			children = (
+				1AFD12A02532E11600F3FAF3 /* CropToolTests.swift */,
+				1AFD12A22532E11600F3FAF3 /* Info.plist */,
+			);
+			path = CropToolTests;
+			sourceTree = "<group>";
+		};
+		1AFD12AA2532E11700F3FAF3 /* CropToolUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1AFD12AB2532E11700F3FAF3 /* CropToolUITests.swift */,
+				1AFD12AD2532E11700F3FAF3 /* Info.plist */,
+			);
+			path = CropToolUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1AFD12852532E11400F3FAF3 /* CropTool */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1AFD12B02532E11700F3FAF3 /* Build configuration list for PBXNativeTarget "CropTool" */;
+			buildPhases = (
+				1AFD12822532E11400F3FAF3 /* Sources */,
+				1AFD12832532E11400F3FAF3 /* Frameworks */,
+				1AFD12842532E11400F3FAF3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CropTool;
+			productName = CropTool;
+			productReference = 1AFD12862532E11400F3FAF3 /* CropTool.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1AFD129B2532E11600F3FAF3 /* CropToolTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1AFD12B32532E11700F3FAF3 /* Build configuration list for PBXNativeTarget "CropToolTests" */;
+			buildPhases = (
+				1AFD12982532E11600F3FAF3 /* Sources */,
+				1AFD12992532E11600F3FAF3 /* Frameworks */,
+				1AFD129A2532E11600F3FAF3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1AFD129E2532E11600F3FAF3 /* PBXTargetDependency */,
+			);
+			name = CropToolTests;
+			productName = CropToolTests;
+			productReference = 1AFD129C2532E11600F3FAF3 /* CropToolTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1AFD12A62532E11700F3FAF3 /* CropToolUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1AFD12B62532E11700F3FAF3 /* Build configuration list for PBXNativeTarget "CropToolUITests" */;
+			buildPhases = (
+				1AFD12A32532E11700F3FAF3 /* Sources */,
+				1AFD12A42532E11700F3FAF3 /* Frameworks */,
+				1AFD12A52532E11700F3FAF3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1AFD12A92532E11700F3FAF3 /* PBXTargetDependency */,
+			);
+			name = CropToolUITests;
+			productName = CropToolUITests;
+			productReference = 1AFD12A72532E11700F3FAF3 /* CropToolUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1AFD127E2532E11400F3FAF3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					1AFD12852532E11400F3FAF3 = {
+						CreatedOnToolsVersion = 12.0;
+					};
+					1AFD129B2532E11600F3FAF3 = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = 1AFD12852532E11400F3FAF3;
+					};
+					1AFD12A62532E11700F3FAF3 = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = 1AFD12852532E11400F3FAF3;
+					};
+				};
+			};
+			buildConfigurationList = 1AFD12812532E11400F3FAF3 /* Build configuration list for PBXProject "CropTool" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1AFD127D2532E11400F3FAF3;
+			productRefGroup = 1AFD12872532E11400F3FAF3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1AFD12852532E11400F3FAF3 /* CropTool */,
+				1AFD129B2532E11600F3FAF3 /* CropToolTests */,
+				1AFD12A62532E11700F3FAF3 /* CropToolUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1AFD12842532E11400F3FAF3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AFD12962532E11600F3FAF3 /* LaunchScreen.storyboard in Resources */,
+				1AFD12932532E11600F3FAF3 /* Assets.xcassets in Resources */,
+				1AFD12912532E11400F3FAF3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1AFD129A2532E11600F3FAF3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1AFD12A52532E11700F3FAF3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1AFD12822532E11400F3FAF3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AFD128E2532E11400F3FAF3 /* ViewController.swift in Sources */,
+				1AFD128A2532E11400F3FAF3 /* AppDelegate.swift in Sources */,
+				1AFD128C2532E11400F3FAF3 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1AFD12982532E11600F3FAF3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AFD12A12532E11600F3FAF3 /* CropToolTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1AFD12A32532E11700F3FAF3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AFD12AC2532E11700F3FAF3 /* CropToolUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1AFD129E2532E11600F3FAF3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1AFD12852532E11400F3FAF3 /* CropTool */;
+			targetProxy = 1AFD129D2532E11600F3FAF3 /* PBXContainerItemProxy */;
+		};
+		1AFD12A92532E11700F3FAF3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1AFD12852532E11400F3FAF3 /* CropTool */;
+			targetProxy = 1AFD12A82532E11700F3FAF3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1AFD128F2532E11400F3FAF3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1AFD12902532E11400F3FAF3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1AFD12942532E11600F3FAF3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1AFD12952532E11600F3FAF3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1AFD12AE2532E11700F3FAF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1AFD12AF2532E11700F3FAF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1AFD12B12532E11700F3FAF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H5BVQ8XRL4;
+				INFOPLIST_FILE = CropTool/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.goodnotes.CropTool;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1AFD12B22532E11700F3FAF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H5BVQ8XRL4;
+				INFOPLIST_FILE = CropTool/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.goodnotes.CropTool;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1AFD12B42532E11700F3FAF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H5BVQ8XRL4;
+				INFOPLIST_FILE = CropToolTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.goodnotes.CropToolTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CropTool.app/CropTool";
+			};
+			name = Debug;
+		};
+		1AFD12B52532E11700F3FAF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H5BVQ8XRL4;
+				INFOPLIST_FILE = CropToolTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.goodnotes.CropToolTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CropTool.app/CropTool";
+			};
+			name = Release;
+		};
+		1AFD12B72532E11700F3FAF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H5BVQ8XRL4;
+				INFOPLIST_FILE = CropToolUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.goodnotes.CropToolUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CropTool;
+			};
+			name = Debug;
+		};
+		1AFD12B82532E11700F3FAF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H5BVQ8XRL4;
+				INFOPLIST_FILE = CropToolUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.goodnotes.CropToolUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CropTool;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1AFD12812532E11400F3FAF3 /* Build configuration list for PBXProject "CropTool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1AFD12AE2532E11700F3FAF3 /* Debug */,
+				1AFD12AF2532E11700F3FAF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1AFD12B02532E11700F3FAF3 /* Build configuration list for PBXNativeTarget "CropTool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1AFD12B12532E11700F3FAF3 /* Debug */,
+				1AFD12B22532E11700F3FAF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1AFD12B32532E11700F3FAF3 /* Build configuration list for PBXNativeTarget "CropToolTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1AFD12B42532E11700F3FAF3 /* Debug */,
+				1AFD12B52532E11700F3FAF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1AFD12B62532E11700F3FAF3 /* Build configuration list for PBXNativeTarget "CropToolUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1AFD12B72532E11700F3FAF3 /* Debug */,
+				1AFD12B82532E11700F3FAF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1AFD127E2532E11400F3FAF3 /* Project object */;
+}
