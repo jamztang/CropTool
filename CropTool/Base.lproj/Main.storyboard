@@ -33,19 +33,41 @@
                                     <action selector="segmentedControlDidChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="Ffd-Tc-8Fj"/>
                                 </connections>
                             </segmentedControl>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="o4m-ei-7FK">
+                                <rect key="frame" x="297" y="915" width="240" height="128"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="C6X-4E-3DC"/>
+                                    <constraint firstAttribute="width" constant="240" id="oQc-TZ-wwU"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KRC-Xh-EgM">
+                                <rect key="frame" x="559" y="915" width="240" height="128"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="5HB-eo-ol0"/>
+                                    <constraint firstAttribute="height" constant="128" id="FJj-ck-adT"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sct-zX-Urt" secondAttribute="bottom" constant="21" id="0ku-KK-f9C"/>
+                            <constraint firstItem="o4m-ei-7FK" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="7V9-cA-Eqf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PFU-VF-xUw" secondAttribute="bottom" constant="20" id="A3x-ku-w4l"/>
                             <constraint firstItem="sct-zX-Urt" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="PFU-VF-xUw" secondAttribute="trailing" constant="8" symbolic="YES" id="Ee8-MB-5ef"/>
                             <constraint firstItem="PFU-VF-xUw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MPi-Eb-bMm"/>
+                            <constraint firstItem="sct-zX-Urt" firstAttribute="top" secondItem="o4m-ei-7FK" secondAttribute="bottom" constant="18" id="Qe9-Ds-E3h"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KRC-Xh-EgM" secondAttribute="trailing" constant="35" id="dQm-fZ-f4s"/>
+                            <constraint firstItem="KRC-Xh-EgM" firstAttribute="bottom" secondItem="o4m-ei-7FK" secondAttribute="bottom" id="ele-iU-VQM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sct-zX-Urt" secondAttribute="trailing" constant="26" id="ofo-qL-uAr"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="maskView" destination="o4m-ei-7FK" id="Cu1-Xf-CiB"/>
                         <outlet property="modeSegmentedControl" destination="PFU-VF-xUw" id="Xmh-ZM-FYx"/>
+                        <outlet property="previewView" destination="KRC-Xh-EgM" id="6cL-wE-AWz"/>
                         <outlet property="resetButton" destination="sct-zX-Urt" id="TKu-jz-NXc"/>
                     </connections>
                 </viewController>
@@ -57,6 +79,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

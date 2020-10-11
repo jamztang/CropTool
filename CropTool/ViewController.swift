@@ -18,6 +18,9 @@ class ViewController: UIViewController {
     @IBOutlet private weak var resetButton: UIButton!
 
     private let canvasView = CanvasView(frame: .zero)
+    @IBOutlet weak var maskView: UIImageView!
+    @IBOutlet weak var previewView: UIImageView!
+    private var image: UIImage = UIImage(named: "baby") ?? UIImage()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +28,9 @@ class ViewController: UIViewController {
 
         self.view.insertSubview(canvasView, at: 0)
         canvasView.frame = view.bounds
+        canvasView.image = image
         canvasView.isUserInteractionEnabled = true
+        canvasView.delegate = self
         canvasView.autoresizingMask = [.flexibleHeight, .flexibleWidth, .flexibleRightMargin, .flexibleLeftMargin]
     }
 
@@ -50,3 +55,9 @@ class ViewController: UIViewController {
     }
 }
 
+extension ViewController: CanvasViewDelegate {
+    func canvasView(_ view: CanvasView, didCreate mask: UIImage, result: UIImage) {
+        maskView.image = mask
+        previewView.image = result
+    }
+}
