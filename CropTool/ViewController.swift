@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet private weak var modeSegmentedControl: UISegmentedControl!
     @IBOutlet private weak var resetButton: UIButton!
     @IBOutlet private weak var selectButton: UIButton!
+    @IBOutlet weak var saveButton: UIButton!
     @IBOutlet private weak var canvasView: CanvasView!
 
     @IBOutlet weak var maskView: UIImageView!
@@ -49,6 +50,17 @@ class ViewController: UIViewController {
         picker.sourceType = .photoLibrary
         picker.delegate = self
         present(picker, animated: true, completion: nil)
+    }
+
+    @IBAction func saveButtonDidPress(_ sender: Any) {
+        if let image = previewView.image {
+            let activityController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+            if let popover = activityController.popoverPresentationController, let sender = sender as? UIView {
+                popover.sourceView = sender
+                popover.sourceRect = sender.bounds
+            }
+            present(activityController, animated: true)
+        }
     }
 
     @IBAction func segmentedControlDidChange(_ sender: Any) {

@@ -60,6 +60,13 @@
                                 <rect key="frame" x="10" y="85" width="814" height="822"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kyM-a4-b27">
+                                <rect key="frame" x="149" y="1062" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveButtonDidPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="obe-CL-RcC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -73,6 +80,8 @@
                             <constraint firstItem="RAc-9V-xUy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="OG8-M0-u37"/>
                             <constraint firstItem="sct-zX-Urt" firstAttribute="top" secondItem="o4m-ei-7FK" secondAttribute="bottom" constant="18" id="Qe9-Ds-E3h"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RAc-9V-xUy" secondAttribute="trailing" constant="10" id="RKB-CE-8C6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kyM-a4-b27" secondAttribute="bottom" constant="20" id="UnC-OZ-W54"/>
+                            <constraint firstItem="kyM-a4-b27" firstAttribute="leading" secondItem="EcR-w4-exx" secondAttribute="trailing" constant="40" id="WhP-AT-pgN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KRC-Xh-EgM" secondAttribute="trailing" constant="35" id="dQm-fZ-f4s"/>
                             <constraint firstItem="KRC-Xh-EgM" firstAttribute="bottom" secondItem="o4m-ei-7FK" secondAttribute="bottom" id="ele-iU-VQM"/>
                             <constraint firstItem="o4m-ei-7FK" firstAttribute="top" secondItem="RAc-9V-xUy" secondAttribute="bottom" constant="8" symbolic="YES" id="lLb-IW-6yy"/>
@@ -87,6 +96,7 @@
                         <outlet property="modeSegmentedControl" destination="PFU-VF-xUw" id="Xmh-ZM-FYx"/>
                         <outlet property="previewView" destination="KRC-Xh-EgM" id="6cL-wE-AWz"/>
                         <outlet property="resetButton" destination="sct-zX-Urt" id="TKu-jz-NXc"/>
+                        <outlet property="saveButton" destination="kyM-a4-b27" id="xDj-V5-rND"/>
                         <outlet property="selectButton" destination="EcR-w4-exx" id="552-rG-U6m"/>
                     </connections>
                 </viewController>
