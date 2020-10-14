@@ -16,27 +16,39 @@ class ViewController: UIViewController {
 
     @IBOutlet private weak var modeSegmentedControl: UISegmentedControl!
     @IBOutlet private weak var resetButton: UIButton!
+    @IBOutlet private weak var selectButton: UIButton!
+    @IBOutlet private weak var canvasView: CanvasView!
 
-    private let canvasView = CanvasView(frame: .zero)
     @IBOutlet weak var maskView: UIImageView!
     @IBOutlet weak var previewView: UIImageView!
-    private var image: UIImage = UIImage(named: "baby") ?? UIImage()
+    private var image: UIImage? {
+        didSet {
+            canvasView.setImage(image, resize: true)
+            canvasView.reset()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
 
-        self.view.insertSubview(canvasView, at: 0)
         canvasView.frame = view.bounds
-        canvasView.image = image
         canvasView.isUserInteractionEnabled = true
         canvasView.delegate = self
-        canvasView.autoresizingMask = [.flexibleHeight, .flexibleWidth, .flexibleRightMargin, .flexibleLeftMargin]
+
+        image = UIImage(named: "baby")
     }
 
     @IBAction func resetButtonDidPress(_ sender: Any) {
         Swift.print("TTT reset")
         canvasView.reset()
+    }
+
+    @IBAction func selectButtonDidPress(_ sender: Any) {
+        let picker = UIImagePickerController()
+        picker.sourceType = .photoLibrary
+        picker.delegate = self
+        present(picker, animated: true, completion: nil)
     }
 
     @IBAction func segmentedControlDidChange(_ sender: Any) {
@@ -59,5 +71,15 @@ extension ViewController: CanvasViewDelegate {
     func canvasView(_ view: CanvasView, didCreate mask: UIImage, result: UIImage) {
         maskView.image = mask
         previewView.image = result
+    }
+}
+
+extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        Swift.print("TTT didFinishPickingMediaWithInfo \(info)")
+
+        picker.dismiss(animated: true, completion: nil)
+        guard let image = (info[.editedImage] ?? info[.originalImage]) as? UIImage else { return }
+        self.image = image
     }
 }

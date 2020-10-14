@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreGraphics
+import AVFoundation
 
 struct Stroke {
     enum Operation {
@@ -35,7 +36,7 @@ class CanvasView: UIView {
     private var maskImage: UIImage?
 
     var operation: Stroke.Operation = .union
-    var image: UIImage?
+    private var image: UIImage?
     weak var delegate: CanvasViewDelegate?
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -72,12 +73,33 @@ class CanvasView: UIView {
         getMask()
     }
 
+    func setImage(_ image: UIImage?, resize: Bool = true) {
+        if let image = image, resize {
+            let rect = AVMakeRect(aspectRatio: image.size, insideRect: bounds)
+            UIGraphicsBeginImageContextWithOptions(rect.size, false, 0.0)
+            image.draw(in: CGRect(origin: .zero, size: rect.size))
+            let newImage = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+
+            self.image = newImage
+        } else {
+            self.image = image
+        }
+    }
+
+    func imageRect() -> CGRect {
+        guard let image = image else {
+            return .zero
+        }
+        return AVMakeRect(aspectRatio: image.size, insideRect: bounds)
+    }
+
     func getMask() {
         isCreatingMask = true
         guard let image = image else { return }
-        let point = CGPoint(x: bounds.size.width / 2 - image.size.width / 2, y: bounds.size.height / 2 - image.size.height / 2)
+
         let scale = UIScreen.main.scale
-        let cropRect = CGRect(origin: point, size: image.size).applying(.init(scaleX: scale, y: scale))
+        let cropRect = imageRect().applying(.init(scaleX: scale, y: scale))
 
         UIGraphicsBeginImageContextWithOptions(bounds.size, false, 0.0)
         defer { UIGraphicsEndImageContext() }
@@ -104,16 +126,13 @@ class CanvasView: UIView {
 
         // drawImage
         if !isCreatingMask {
+            let rect = imageRect()
             if let image = image {
-                // Draw the input image
-                let point = CGPoint(x: rect.size.width / 2 - image.size.width / 2, y: rect.size.height / 2 - image.size.height / 2)
-                image.draw(at: point, blendMode: .normal, alpha: 0.3)
+                image.draw(in: rect, blendMode: .normal, alpha: 0.3)
             }
 
-            if let resultImage = resultImage {
-                // Draw the result image
-                let point = CGPoint(x: rect.size.width / 2 - resultImage.size.width / 2, y: rect.size.height / 2 - resultImage.size.height / 2)
-                resultImage.draw(at: point)
+            if let image = resultImage {
+                image.draw(in: rect)
             }
         } else {
             // render strokes
@@ -166,6 +185,7 @@ class CanvasView: UIView {
 
     func reset() {
         maskImage = nil
+        resultImage = nil
         isCreatingMask = false
         strokes.removeAll()
         setNeedsDisplay()
