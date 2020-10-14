@@ -17,11 +17,12 @@ class ViewController: UIViewController {
     @IBOutlet private weak var modeSegmentedControl: UISegmentedControl!
     @IBOutlet private weak var resetButton: UIButton!
     @IBOutlet private weak var selectButton: UIButton!
-    @IBOutlet weak var saveButton: UIButton!
     @IBOutlet private weak var canvasView: CanvasView!
 
-    @IBOutlet weak var maskView: UIImageView!
-    @IBOutlet weak var previewView: UIImageView!
+    @IBOutlet private weak var maskView: UIImageView!
+    @IBOutlet private weak var previewView: UIImageView!
+    @IBOutlet private var tapGestureRecognizer: UITapGestureRecognizer!
+
     private var image: UIImage? {
         didSet {
             canvasView.setImage(image, resize: true)
@@ -52,10 +53,22 @@ class ViewController: UIViewController {
         present(picker, animated: true, completion: nil)
     }
 
-    @IBAction func saveButtonDidPress(_ sender: Any) {
-        if let image = previewView.image {
+    @IBAction func handleTap(_ tapGestureRecognizer: UITapGestureRecognizer) {
+        let location = tapGestureRecognizer.location(ofTouch: 0, in: view)
+
+        var image: UIImage?
+        var sender: UIView?
+        if maskView.frame.contains(location) {
+            image = maskView.image
+            sender = maskView
+        } else if previewView.frame.contains(location) {
+            image = previewView.image
+            sender = previewView
+        }
+
+        if let image = image {
             let activityController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
-            if let popover = activityController.popoverPresentationController, let sender = sender as? UIView {
+            if let popover = activityController.popoverPresentationController, let sender = sender {
                 popover.sourceView = sender
                 popover.sourceRect = sender.bounds
             }
